@@ -77,7 +77,7 @@ class Heading extends React.Component {
         const { cityName, country, type, updated } = this.props;
 
         if (this.props.type === 'current') {
-            const icon_src = `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
+            const icon_src = `https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
             iconbox = <Iconbox src={icon_src} temp={kelvinToCelcius(main.temp)} />;
         }
         return (
