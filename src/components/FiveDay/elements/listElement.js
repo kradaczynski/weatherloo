@@ -5,7 +5,7 @@ import { kelvinToCelcius, windForceName } from '../../../helpers';
 
 const listElement = props => {
    const { time, icon, desc, speed, humidity, pressure, temp } = props.data;
-   const src = `http://openweathermap.org/img/wn/${icon}.png`;
+   const src = `https://openweathermap.org/img/wn/${icon}.png`;
    return (
       <div className="fiveday__listitem">
          <div className="fiveday__left">
