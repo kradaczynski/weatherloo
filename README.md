@@ -15,3 +15,5 @@
 It was used to make graphs.
 
 Check the application in work here: <a href="https://weatherloo.firebaseapp.com/">Weatherloo</a>
+
+<b>MIT License.</b>
