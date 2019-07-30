@@ -1,5 +1,7 @@
 <h2>Weatherloo - a simple weather application created with React.</h2>
 
+It uses a free <a href="https://openweathermap.org/">Open Weather Map</a> API to get weather data.
+
 <h4>Some components which were used:</h4>
 
 <ul>
