@@ -1,0 +1,7 @@
+@import '../../../sass/variables.scss';
+
+.boxlist {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}

@@ -1,0 +1,48 @@
+*, *::after, *::before {
+	margin:0;
+	padding:0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+
+	@include respond(width1200) {
+		font-size: 56.25%;
+	}
+	
+	@include respond(width900) {
+		font-size: 50%;
+	}
+
+	@include respond(width600) {
+		font-size: 43.75%;
+	}
+
+	@include respond(width1800) {
+		font-size: 75%;
+	}
+}
+body {
+	box-sizing: border-box;
+}
+
+::selection {
+	background-color: $color-secondary;
+	color:$color-white;
+}
+
+.backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 80%;
+        width: 100%;
+}
+
+.error {
+        font-size: 3rem;
+        color: $color-grey-dark;
+        text-transform: uppercase;
+        @include abs-center;
+}

@@ -1,0 +1,65 @@
+@import '../../../../sass/variables.scss';
+@import '../../../../sass/mixins.scss';
+
+.box {
+   width:49%;
+   background:$color-white;
+   padding:2rem 1.5rem;
+   margin-bottom: 1.5rem;
+   display: flex;
+   position: relative;
+   justify-content: space-between;
+   box-shadow: 1rem 1rem 3rem rgba(0,0,0,0.1);
+
+   @include respond(width400) {
+      width:100%;
+   }
+
+   &:nth-child(even) {
+      margin-left:1.2rem;
+
+      @include respond(width500) {
+         margin-left:1rem;
+      }
+      
+      @include respond(width400) {
+         margin-left:0;
+      }
+   }
+
+   &__iconbox {
+      font-size: 4rem;
+      height: 8rem;
+      width: 8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $color-white;
+      border-radius: 50%;
+      border: 0.5rem solid $color-grey-light;
+      color:$color-tertiary;
+
+      @include respond(width900) {
+         height:7rem;
+         width:7rem;
+         font-size: 3.2rem;
+      }
+   }
+
+   &__textbox {
+      width:70%;
+   }
+
+   &__title {
+      font-size: 2rem;
+      text-align: right;
+      color:$color-primary-dark;
+      margin-bottom: 1rem;
+      font-weight: 600;
+   }
+
+   &__content {
+      text-align: right;
+      color: $color-secondary;
+   }
+}

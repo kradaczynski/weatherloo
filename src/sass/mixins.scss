@@ -1,0 +1,44 @@
+@mixin clearfix {
+	&::after {
+		content:"";
+		clear:both;
+		display: table;
+	}
+}
+
+@mixin abs-center {
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == width400 {
+		@media only screen and (max-width: 25em) { @content }; //400
+	}
+
+	@if $breakpoint == width500 {
+		@media only screen and (max-width: 31.25em) { @content }; //500
+	}
+
+	@if $breakpoint == width600 {
+		@media only screen and (max-width: 37.5em) { @content }; //600
+	}
+
+	@if $breakpoint == width700 {
+		@media only screen and (max-width: 43.75em) { @content }; //700
+	}
+
+	@if $breakpoint == width900 {
+		@media only screen and (max-width: 56.25em) { @content }; //900
+	}
+
+	@if $breakpoint == width1200 {
+		@media only screen and (max-width: 75em) { @content }; //1200
+	}
+
+	@if $breakpoint == width1800 {
+		@media only screen and (min-width: 112.5em) { @content }; //1800
+	}
+}

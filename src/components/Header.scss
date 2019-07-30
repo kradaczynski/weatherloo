@@ -1,0 +1,51 @@
+@import '../sass/variables.scss';
+@import '../sass/mixins.scss';
+
+.header {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    position: relative;
+    background:$color-white;
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:8rem;
+
+        @include respond(width500) {
+            height:14rem;
+        }
+    }
+
+    &__logobox {
+        margin-right:auto;
+    }
+
+    &__logo {
+        &, &:link, &:visited {
+            font-family: 'Niconne';
+            font-size: 4.5rem;
+            color:$color-primary;
+            display: block;
+            text-decoration:none;
+            line-height: 1.5;
+
+            @include respond(width500) {
+                font-size: 3.5rem;
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+
+        @include respond(width500) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+}

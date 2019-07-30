@@ -1,0 +1,9 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
+
+.current {
+    position: relative;
+    margin-top: 5rem;
+
+    @include clearfix;
+}

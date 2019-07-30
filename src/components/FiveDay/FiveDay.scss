@@ -1,0 +1,124 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
+
+.fiveday {
+    position: relative;
+    margin-top: 5rem;
+    //background-image:linear-gradient(to right bottom, $color-secondary, $color-tertiary);
+    //box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
+    color: $color-secondary;
+    
+    @include clearfix;
+
+    &__backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 80%;
+        width: 100%;
+    }
+
+    &__error {
+        font-size: 3rem;
+        color: $color-grey-dark;
+        text-transform: uppercase;
+        @include abs-center;
+    }
+
+    &__list {
+        background-color: $color-white;
+        box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    &__header {
+        text-align: center;
+        font-weight: 600;
+        background: $color-grey-light;
+        padding:0.5rem 0;
+    }
+
+    &__listitem {
+        display: flex;
+        align-items: center;
+        font-size: 1.3rem;
+        padding:0.5rem;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $color-grey-light;
+        }
+
+        @include respond(width500) {
+            justify-content: space-between;
+        }
+    }
+
+    &__desc {
+        margin-left:1rem;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        margin-right:2rem;
+        
+        & p {
+            font-weight: 600;
+        }
+    }
+
+    &__right {
+        margin-left:7rem;
+
+        @include respond(width900) {
+            margin-left: 30%;
+        }
+
+        @include respond(width500) {
+            margin-left:0;
+        }
+        
+    }
+
+    &__graph {
+        background:white;
+        margin-top:3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+        flex-wrap: wrap;
+        box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.1);
+
+        @include respond(width900) {
+            padding:0;
+        }
+
+        & svg {
+            transition: all 0.4s;
+            transform-origin: 0% 100%;
+        }
+   }
+
+   &__graph-heading {
+         width: 100%;
+        text-align: center;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        background: none;
+        outline: none;
+        display: inline-block;
+        border: none;
+        cursor: pointer;
+        color: $color-secondary;
+        font-family: inherit;
+        font-size: inherit;
+        transition: all 0.3s;
+
+        &:hover {
+            color: $color-primary-dark;
+        }
+   }
+}
+

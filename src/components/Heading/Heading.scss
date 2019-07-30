@@ -1,0 +1,140 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
+
+.heading {
+   box-shadow: 1rem 1rem 3rem rgba(0,0,0,0.1);
+   padding: 2rem;
+   background:$color-white;
+
+   @include respond(width900) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+   }
+
+   @include respond(width500) {
+      align-items: center;
+      flex-direction: column;
+   }
+
+   // Basic
+
+   &__textbox {
+
+      @include respond(width900) {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+      }
+   }
+
+   &__city {
+      font-weight: 600;
+      color:$color-secondary;
+      margin-left: 1rem;
+   }
+
+   // Refresh button
+
+   &__buttonbox {
+      
+      @include respond(width900) {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin-left: 3rem;
+      }
+
+      @include respond(width500) {
+         margin-left: 0;
+      }
+   }
+
+
+   // Iconbox
+
+   &__iconbox {
+      display: flex;
+      align-items: center;
+      
+      @include respond(width900) {
+         margin-left: 3rem;
+      }
+
+      @include respond(width500) {
+         margin-left:0;
+      }
+
+   }
+
+   &__iconwrapper {
+      display: flex;
+      align-items: center;
+   }
+
+   &__temperature {
+      font-size: 2rem;
+      color:$color-secondary;
+   }
+
+   &__paragraph {
+      color:$color-secondary;
+      margin-left: 1rem;
+      font-size: 2rem;
+   }
+
+   // Searchbox
+
+   &__searchbox {
+      
+      @include respond(width900) {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         justify-content: center;
+         margin-left:auto;
+      }
+
+      @include respond(width700) {
+         margin-left:0;
+         width:100%;
+      }
+
+      @include respond(width500) {
+         align-items: center;  
+      }
+   }
+
+   &__searchtext {
+      color:$color-primary-dark;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: 400;
+   }
+
+   &__input {
+      padding:1rem 2rem;
+      border:none;
+      margin-bottom:1rem;
+      font-size: 1.3rem;
+      background:$color-quinary;
+      outline:none;
+      display: block;
+   }
+
+   &__inputbox {
+      position: relative;
+
+      @include respond(width900) {
+         display: flex;
+         flex-direction: column;
+      }
+   }
+
+   &__error {
+      color:red;
+      position: absolute;
+      top:3.5rem;
+   }
+
+}

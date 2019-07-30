@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Niconne&display=swap&subset=latin-ext');
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	line-height: 1.7;
+    color:$color-grey-dark;
+    font-size: 1.6rem;
+}
+
+.heading-primary {
+	font-size: 2rem;
+	letter-spacing: -1px;
+	font-weight: 400;
+	color:$color-primary-dark;
+}
+
+.heading-secondary {
+	font-size: 1.7rem;
+	font-weight: 400;
+	color: $color-primary-dark;
+}
+
+.button {
+   &, &:link, &:visited {
+   color:$color-white;
+   display: flex;
+   align-items: center;
+   text-decoration: none;
+   padding:1rem 2rem;
+   font-weight: 600;
+   transition: all 0.4s;
+   position: relative;
+	z-index: 5;
+	cursor: pointer;
+	border:none;
+	background: $color-secondary;
+	font-family: inherit;
+
+      &:not(:last-child) {
+         margin-right:1rem;
+      }
+
+      @include respond(width500) {
+         width:100%;
+
+         &:not(:last-child) {
+            margin-right:0;
+            margin-bottom: 1rem;
+         }
+      }
+
+      &:before {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         height: 100%;
+         width: 3px;
+         z-index: -1;
+         background-color: $color-primary-dark;
+         -webkit-transform: scaleY(0);
+         transform: scaleY(0);
+         transition: transform 0.2s,width 0.3s cubic-bezier(1, 0, 0, 1) 0.2s,background-color 0.1s;
+      }
+   }
+
+   &:hover {
+      &:before {
+         transform:scaleY(1);
+         width:100%;
+      }
+   }
+
+   &:active, &:focus {
+       outline:none;
+	}
+	
+	&.active {
+		&:before {
+            transform:scaleY(1);
+            width:100%;
+        }
+	}
+
+	&--heading1 {
+		font-weight: 400;
+		font-size: 1.4rem;
+		margin:2rem 0;
+	}
+
+	&--heading2 {
+		font-weight: 400;
+		font-size: 1.4rem;
+		margin-top:3rem;
+	}
+
+}
