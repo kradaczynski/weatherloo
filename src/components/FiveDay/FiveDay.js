@@ -32,7 +32,7 @@ class FiveDay extends React.Component {
         const dateList = {};
         data.forEach(el => {
             const element_date = new Date(el.dt * 1000);
-            const new_date = element_date.toLocaleDateString('en-GB', { weekday: "long", day: "2-digit", month: "short", year: "numeric" });
+            const new_date = element_date.toLocaleDateString('en-GB', { weekday: "long", day: "2-digit", month: "short", year: "numeric" }).replace(/\u200E/g, '');
             dateList[new_date] = [];
         })
 
